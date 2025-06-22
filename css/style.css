@@ -17,8 +17,8 @@ ul li{
     list-style-type: none;
 }
 .container {
-    width: 1440px;
-    padding: 0 ;
+    width: 1158px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 a {
@@ -56,7 +56,7 @@ img {
 }
 /* header  */
 .header {
-  
+    border-bottom: 1px solid #e7e9fc;
 }
 .header-container{
     display: flex;
@@ -64,6 +64,7 @@ img {
 }
 .header-navigation {
     display: flex;
+    align-items: center;
 }
 
 .header-logo {
@@ -76,7 +77,8 @@ img {
             
             color: #4D5AE5;
 
-            margin: 24px 76px 24px 156px;
+            margin: 24px 76px 24px 0;
+            margin-left: auto;
 }
 .logo-header-text{
     color: #2E2F42
@@ -87,7 +89,7 @@ img {
     display: flex;
     gap:40px;
     margin: 24px 0;
-    margin-right: 332px;
+
 }
 
 .header-list-item {
@@ -95,7 +97,8 @@ img {
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
-        color: #2E2F42
+        color: #2E2F42;
+        padding: 24px 0;
 }
 .header-list-item:hover{
    color:#404BBF
@@ -108,15 +111,15 @@ img {
 }
 .header-address {
     font-style: normal;
-    
+    margin-left: auto;
+    margin-right: auto;
     
 }
 .header-address-list{
     display: flex;
-    justify-content: flex-end;
     gap:40px;
     margin: 24px 0;
-    margin-right: 156px;
+    
 }
 .header-address-list li a {
     font-weight: 400;
@@ -152,8 +155,7 @@ img {
 .hero-banner {
     background-color: #2E2F42;
     max-width: 100%;
-    padding-bottom: 188px;
-    margin-bottom: 120px;
+    padding: 188px 0;
 }
 
 .hero-banner-text {
@@ -164,13 +166,15 @@ img {
         letter-spacing: 0.02em;
         text-align: center;
         color: #FFFFFF;
-        padding: 188px 472px 48px ;
+        max-width: 496px;
+        margin: 0 auto;
+        padding-bottom: 48px;
 
      
 }
 
 .hero-baner-button {
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -182,6 +186,8 @@ img {
         cursor: pointer;
         display: block;
         margin: 0 auto;
+        border-radius: 4px;
+        
  
 }
 .hero-baner-button:hover{
@@ -195,17 +201,17 @@ img {
  }
 /* benefits section */
 .benefits {
-    
+    padding: 120px 0
 }
 
 .benefits-list {
     display: flex;
     gap:24px;
-    margin: 0 156px;
-    margin-bottom: 120px;
 }
 
-.benefits-list-item {}
+.benefits-list-item {
+    width: calc((100% - 72px) / 4);
+}
 
 .benefits-list-item-head {
     font-weight: 500;
@@ -243,18 +249,24 @@ img {
     display: flex;
     gap: 24px;
     justify-content: center;
-    margin: 0 156px;
+    
 }
 
-.team-list-item {background-color: #FFFFFF}
+.team-list-item {background-color: #FFFFFF;
+    width: calc((100% - 72px) / 4);
+    border-radius: 0px 0px 4px 4px;
+}
+.team-list-name{
+    padding: 32px 0;
 
+}
 .team-list-head {font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     text-align: center;
     color: #2E2F42;
-    margin-top: 32px;
+    
     margin-bottom: 8px;
 }
 .team-list-text {
@@ -266,7 +278,9 @@ img {
         color: #434455;
 }
 /* our portfolio saction */
-.porfolio {}
+.porfolio {
+    padding: 120px 0 120px 0
+}
 
 .porfolio-head {
     font-weight: 700;
@@ -277,7 +291,7 @@ img {
         color: #2E2F42;
         text-transform: capitalize;
         margin-bottom: 72px;
-        margin-top: 120px;
+        
 }
 
 .porfolio-list {
@@ -285,10 +299,18 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     gap: 24px;
+    row-gap: 48px;
     margin-bottom: 120px;
 }
 
-.porfolio-list-item {}
+.porfolio-list-item {
+    width: calc((100% - 48px) / 3)
+}
+.porfolio-name{
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+}
 
 .porfolio-list-head {
     font-weight: 500;
@@ -296,7 +318,7 @@ img {
         line-height: 1.2;
         letter-spacing: 0.02em;
         color:#2E2F42;
-        margin-top: 32px;
+        
         margin-bottom: 8px;
 }
 
@@ -310,10 +332,10 @@ img {
 /* footer */
 .footer{
     background-color: #2E2F42;
-    padding: 100px 0 100px 150px;
+    padding: 100px 0;
 }
 .footer-logo {
-    display: block;
+    display: inline-block;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
         font-size: 18px;
@@ -338,3 +360,15 @@ img {
     color: #F4F4FD;
     
 } 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden; }
